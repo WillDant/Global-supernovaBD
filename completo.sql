@@ -1,4 +1,4 @@
--- Drop das tabelas (se existirem)
+-- Drop das tabelas
 DROP TABLE USUARIO CASCADE CONSTRAINTS;
 DROP TABLE DOACAO CASCADE CONSTRAINTS;
 DROP TABLE NOTICIA CASCADE CONSTRAINTS;
@@ -68,7 +68,7 @@ CREATE TABLE AUDITORIA (
     data_alteracao TIMESTAMP DEFAULT SYSTIMESTAMP
 );
 
--- Package de Gestão Supernova adaptado
+-- Package de Gestão Supernova
 CREATE OR REPLACE PACKAGE pkg_supernova AS
     PROCEDURE inserir_usuario(p_nome VARCHAR2, p_email VARCHAR2, p_senha VARCHAR2, p_fl_doc CHAR, p_role VARCHAR2, p_cep VARCHAR2);
     PROCEDURE atualizar_usuario(p_id NUMBER, p_nome VARCHAR2, p_email VARCHAR2, p_senha VARCHAR2, p_fl_doc CHAR, p_role VARCHAR2, p_cep VARCHAR2);
